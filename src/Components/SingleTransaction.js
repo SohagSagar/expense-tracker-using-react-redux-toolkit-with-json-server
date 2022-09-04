@@ -4,6 +4,7 @@ import deleteImg from '../Resourses/delete.svg';
 import { useDispatch } from 'react-redux';
 import { activeEditing, removeTransaction } from '../features/transaction/transactionSlice';
 import { Navigate, useLocation, useMatch, useNavigate } from 'react-router-dom';
+import numberWithCommas from '../Utility/thousandSeperator';
 
 const SingleTransaction = ({ transaction }) => {
     const {id, name,type,amount} = transaction;
@@ -17,10 +18,6 @@ const SingleTransaction = ({ transaction }) => {
         dispatch(activeEditing(transaction));
         if(!match) navigate('/')
         // <Navigate to='/' state={{ from: location }} replace />;
-        
-        
-        
-        console.log('object',!match);
 
     }
 
@@ -31,7 +28,7 @@ const SingleTransaction = ({ transaction }) => {
         <li className={`transaction ${type==='income' ? 'income' : 'expense'}`}>
             <p>{name}</p>
             <div className="right">
-                <p>৳ {amount}</p>
+                <p>৳ {numberWithCommas(amount)}</p>
                 <button className="link" onClick={handleEdit}>
                     <img alt=''
                         className="icon"

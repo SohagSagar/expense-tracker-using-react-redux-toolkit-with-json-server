@@ -114,7 +114,7 @@ const Form = () => {
                         placeholder="300"
                         name="amount"
                         value={amount}
-                        onChange={e => setAmount(e.target.value)}
+                        onChange={e => setAmount(parseInt(e.target.value))}
                     />
                 </div>
 

@@ -1,70 +1,76 @@
 {
   "transactions": [
     {
-      "name": "Family Expenses",
-      "type": "expense",
-      "amount": "545500",
+      "name": "sasa",
+      "type": "income",
+      "amount": 25,
+      "id": 1
+    },
+    {
+      "name": "sasa",
+      "type": "income",
+      "amount": 50,
       "id": 2
     },
     {
-      "name": "ger expense",
+      "name": "saasa",
       "type": "expense",
-      "amount": "3500",
+      "amount": 100,
       "id": 3
     },
     {
-      "name": "new income",
+      "name": "sassa",
       "type": "income",
-      "amount": "2500",
+      "amount": 100,
       "id": 4
     },
     {
-      "name": "income",
+      "name": ",jhm,",
+      "type": "expense",
+      "amount": 25,
+      "id": 5
+    },
+    {
+      "name": "bbcxv",
       "type": "income",
-      "amount": "5000",
+      "amount": 41,
       "id": 6
     },
     {
-      "name": "mouse expense",
-      "type": "expense",
-      "amount": "1050",
-      "id": 13
-    },
-    {
-      "name": "dsds",
+      "name": "sasa",
       "type": "income",
-      "amount": "1414",
-      "id": 14
+      "amount": 25,
+      "id": 7
     },
     {
-      "name": "test1",
+      "name": "sasa",
       "type": "expense",
-      "amount": "25",
-      "id": 15
+      "amount": 258,
+      "id": 8
     },
     {
-      "name": "text2",
+      "name": "sasa",
       "type": "income",
-      "amount": "25",
-      "id": 16
+      "amount": 5224,
+      "id": 9
     },
     {
-      "name": "text3",
-      "type": "expense",
-      "amount": "89",
-      "id": 17
-    },
-    {
-      "name": "text4",
-      "type": "expense",
-      "amount": "85",
-      "id": 18
-    },
-    {
-      "name": "text5",
+      "name": "edited amount",
       "type": "income",
-      "amount": "500",
-      "id": 19
+      "amount": 850,
+      "id": 10
+    },
+    {
+      "name": "sasas",
+      "type": "income",
+      "amount": 85,
+      "id": 11
+    },
+    {
+      "name": "zadad",
+      "type": "income",
+      "amount": 50000,
+      "id": 12
     }
   ]
 }

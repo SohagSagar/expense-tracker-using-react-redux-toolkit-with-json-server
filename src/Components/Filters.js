@@ -9,7 +9,6 @@ const Filters = () => {
     const [input, setInput] = useState(searched);
     const [type, setType] = useState(radioType)
 
-
     function debounce(fn, delay) {
         let timer;
         return (() => {
@@ -32,11 +31,10 @@ const Filters = () => {
         disPatch(filterByRadio(type))
     },[type,disPatch])
 
-
     const handleReset = () =>{
         disPatch(resetFilter())
-        setInput(searched);
-        setType(radioType);
+        setInput('');
+        setType('');
     }
 
 

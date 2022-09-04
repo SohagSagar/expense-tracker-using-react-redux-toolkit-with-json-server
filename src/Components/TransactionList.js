@@ -51,7 +51,7 @@ const TransactionList = () => {
             <div className="conatiner_of_list_of_transactions">
                 <ul>
                     {content}
-                    {transactions.length > 5 && match ? <p className='text-center'><Link to={'/all-transactions'}>View More</Link></p> : <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPage={totalPage} />
+                    {transactions.length > 5 && match ? <p className='text-center'><Link to={'/all-transactions'}>View More</Link></p> : !match && <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPage={totalPage} />
                     }
                 </ul>
 
