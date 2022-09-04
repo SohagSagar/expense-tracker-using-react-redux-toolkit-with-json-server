@@ -35,6 +35,36 @@
       "type": "income",
       "amount": "1414",
       "id": 14
+    },
+    {
+      "name": "test1",
+      "type": "expense",
+      "amount": "25",
+      "id": 15
+    },
+    {
+      "name": "text2",
+      "type": "income",
+      "amount": "25",
+      "id": 16
+    },
+    {
+      "name": "text3",
+      "type": "expense",
+      "amount": "89",
+      "id": 17
+    },
+    {
+      "name": "text4",
+      "type": "expense",
+      "amount": "85",
+      "id": 18
+    },
+    {
+      "name": "text5",
+      "type": "income",
+      "amount": "500",
+      "id": 19
     }
   ]
 }

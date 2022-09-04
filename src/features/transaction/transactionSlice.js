@@ -7,13 +7,17 @@ const initialState = {
     isLoading: false,
     isError: false,
     error: '',
-    editng: {}
+    editng: {},
+    radioType: '',
+    searched: ''
 
 }
 
 //create async thunks
-export const fetchTransactions = createAsyncThunk('transaction/fetchTransactions', async () => {
-    const transaction = await getTransactions();
+export const fetchTransactions = createAsyncThunk('transaction/fetchTransactions', async ({radioType,searched}) => {
+    const transaction = await getTransactions({radioType,searched});
+    
+    
     return transaction;
 })
 
@@ -23,7 +27,7 @@ export const createTransaction = createAsyncThunk('transaction/createTransaction
 })
 
 
-export const updateTransaction = createAsyncThunk('transaction/updateTransaction', async ( id, data ) => {
+export const updateTransaction = createAsyncThunk('transaction/updateTransaction', async (id, data) => {
     const transaction = await editTransactions(id, data);
     return transaction;
 })
@@ -44,8 +48,19 @@ const transactionSlice = createSlice({
         activeEditing: (state, action) => {
             state.editng = action.payload;
         },
-        inActiveEditing: (state, action) => {
+        inActiveEditing: (state) => {
             state.editng = {};
+        },
+        filterByRadio: (state,action)=>{
+            state.radioType=action.payload
+        }
+        ,
+        filterBySearch: (state, action) => {
+            state.searched = action.payload;
+        },
+        resetFilter: (state) => {
+            state.radioType = '';
+            state.searched = '';
         }
     },
     extraReducers: (builder) => {
@@ -125,4 +140,4 @@ const transactionSlice = createSlice({
 })
 
 export default transactionSlice.reducer;
-export const {activeEditing,inActiveEditing} =transactionSlice.actions;
+export const { activeEditing, inActiveEditing,filterByRadio,filterBySearch,resetFilter } = transactionSlice.actions;

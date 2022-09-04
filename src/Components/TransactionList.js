@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useMatch, useNavigate } from 'react-router-dom';
 import useTransactions from '../Hooks/useTransactions';
+import Filters from './Filters';
 import Pagination from './Pagination';
 import SingleTransaction from './SingleTransaction';
 
@@ -12,11 +13,10 @@ const TransactionList = () => {
 
     //find current route
     const match = Boolean(useMatch('/'));
-    console.log(match);
 
     // data for pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(5);
+    const [postsPerPage] = useState(10);
 
 
     // Get current posts
@@ -44,15 +44,17 @@ const TransactionList = () => {
 
     return (
         <>
+            
             {!match && <Link to={'/'}><button className='text-semibold btn w-36'>« Back Home</button></Link>}
-            <p className="second_heading">{match ? 'Your' : 'All'} Transactions:</p>
+            <p className="second_heading font-semibold">{match ? 'Your' : 'All'} Transactions:</p>
+            {!match && <Filters/>}
             <div className="conatiner_of_list_of_transactions">
                 <ul>
                     {content}
                     {transactions.length > 5 && match ? <p className='text-center'><Link to={'/all-transactions'}>View More</Link></p> : <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPage={totalPage} />
                     }
                 </ul>
-                
+
             </div>
         </>
     );
