@@ -1,5 +1,5 @@
 const { default: axios } = require("axios");
 
 export const axiosInstance = axios.create({
-    baseURL: 'http://localhost:9000/',
+    baseURL: 'https://react-redux-json-server.herokuapp.com',
   });
