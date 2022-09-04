@@ -1,10 +1,10 @@
 {
   "transactions": [
     {
-      "id": 1,
-      "name": "Salary from Google",
+      "name": "Salary office",
       "type": "income",
-      "amount": 1000000
+      "amount": "58000",
+      "id": 1
     },
     {
       "id": 2,
@@ -13,21 +13,21 @@
       "amount": 200000
     },
     {
-      "name": "new",
-      "type": "income",
-      "amount": "200",
+      "name": "ger expense",
+      "type": "expense",
+      "amount": "3500",
       "id": 3
     },
     {
-      "name": "new",
-      "type": "expense",
-      "amount": "2000",
+      "name": "new income",
+      "type": "income",
+      "amount": "2500",
       "id": 4
     },
     {
-      "name": "test transaction",
-      "type": "expense",
-      "amount": "250",
+      "name": "test transactionssssssss",
+      "type": "income",
+      "amount": "2504",
       "id": 5
     },
     {
