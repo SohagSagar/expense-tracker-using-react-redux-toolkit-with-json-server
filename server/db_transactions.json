@@ -1,10 +1,10 @@
 {
   "transactions": [
     {
-      "id": 2,
       "name": "Family Expenses",
       "type": "expense",
-      "amount": 200000
+      "amount": "545500",
+      "id": 2
     },
     {
       "name": "ger expense",
@@ -19,16 +19,22 @@
       "id": 4
     },
     {
-      "name": "test transactionssssssss",
-      "type": "income",
-      "amount": "2504",
-      "id": 5
-    },
-    {
       "name": "income",
       "type": "income",
       "amount": "5000",
       "id": 6
+    },
+    {
+      "name": "mouse expense",
+      "type": "expense",
+      "amount": "1050",
+      "id": 13
+    },
+    {
+      "name": "dsds",
+      "type": "income",
+      "amount": "1414",
+      "id": 14
     }
   ]
 }

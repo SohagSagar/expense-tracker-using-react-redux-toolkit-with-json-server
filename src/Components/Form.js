@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { createTransaction, inActiveEditing, updateTransaction } from '../features/transaction/transactionSlice';
 
 const Form = () => {
+
+    const location = useLocation();
+    const navigate =useNavigate();
+    let from = location.state?.from?.pathname || "/";
 
     const [name, setName] = useState('')
     const [type, setType] = useState('')
@@ -49,7 +54,10 @@ const Form = () => {
         dispatch(updateTransaction({id:editng.id,data}))
         if (!isLoading && !isError) resetForm();
         setEditMode(false);
-        dispatch(inActiveEditing())
+        dispatch(inActiveEditing());
+        navigate(from, { replace: true });
+        console.log(from);
+        
     }
     const handleCancelEdit = () => {
         setEditMode(false);

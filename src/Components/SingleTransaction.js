@@ -3,13 +3,25 @@ import editImg from '../Resourses/edit.svg';
 import deleteImg from '../Resourses/delete.svg';
 import { useDispatch } from 'react-redux';
 import { activeEditing, removeTransaction } from '../features/transaction/transactionSlice';
+import { Navigate, useLocation, useMatch, useNavigate } from 'react-router-dom';
 
 const SingleTransaction = ({ transaction }) => {
     const {id, name,type,amount} = transaction;
     const dispatch =useDispatch();
+    const navigate =useNavigate()
+    let location = useLocation();
+    //find current route
+    const match = Boolean(useMatch('/'));
 
     const handleEdit = () =>{
-        dispatch(activeEditing(transaction))
+        dispatch(activeEditing(transaction));
+        if(!match) navigate('/')
+        // <Navigate to='/' state={{ from: location }} replace />;
+        
+        
+        
+        console.log('object',!match);
+
     }
 
     const handleDelete = () =>{
