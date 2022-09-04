@@ -2,12 +2,13 @@ import React from 'react';
 import editImg from '../Resourses/edit.svg';
 import deleteImg from '../Resourses/delete.svg';
 
-const SingleTransaction = () => {
+const SingleTransaction = ({ transaction }) => {
+    const { name,type,amount} = transaction;
     return (
-        <li className="transaction income">
-            <p>Earned this month</p>
+        <li className={`transaction ${type==='income' ? 'income' : 'expense'}`}>
+            <p>{name}</p>
             <div className="right">
-                <p>৳ 100</p>
+                <p>৳ {amount}</p>
                 <button className="link">
                     <img alt=''
                         className="icon"

@@ -15,7 +15,7 @@ const Form = () => {
     }
 
     const dispatch = useDispatch();
-    const { isLoading, isError } = useSelector(state => state.transaction)
+    const { isLoading, isError,error } = useSelector(state => state.transaction)
 
 
     const handleAdd = (e) => {
@@ -79,7 +79,7 @@ const Form = () => {
                 </div>
 
                 <button disabled={isLoading} className="btn bg-[#4338ca]" type='submit'>Add Transaction</button>
-                {!isLoading && isError && <p className='text-red-500'>There is an error!</p>}
+                {!isLoading && isError && <p className='text-red-500'>{error}!</p>}
             </form>
 
             <button className="btn cancel_edit">Cancel Edit</button>

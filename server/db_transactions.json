@@ -23,6 +23,18 @@
       "type": "expense",
       "amount": "2000",
       "id": 4
+    },
+    {
+      "name": "test transaction",
+      "type": "expense",
+      "amount": "250",
+      "id": 5
+    },
+    {
+      "name": "income",
+      "type": "income",
+      "amount": "5000",
+      "id": 6
     }
   ]
 }
